@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="shortcut icon" href="../static/img/Icon.svg" type="image/svg">
+    <title>Sistema de Estoque - Cadastro de Produto</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Estoque</h1>
+    </header>
+    <main>
+        <h2>Cadastro de Produto</h2>
+        <form action="/adicionar_produto" method="post">
+            <div class="inputName">
+                <label for="nomeProduto" class="nameLabel">Nome</label>
+                <input type="text" name="nomeProduto" id="nomeProduto" maxlength="45" pattern="^[a-zA-Z0-9 ]+$" required>
+            </div>
+            <div class="inputType">
+                <label for="tipoProduto" class="typeLabel">Tipo</label>
+                <select name="tipoProduto" id="tipoProduto" required>
+                    <option value="" disabled selected></option>
+                    {% for tipoProduto in tiposProdutos %}
+                    <option value='{{ tipoProduto[0] }}' >{{ tipoProduto[1] }}</option>
+                    {% endfor %}
+                </select>
+                </div>
+            <div class="inputMinimun">
+                <label for="estoqueMinimo" class="minimunLabel">Estoque Mínimo</label>
+                <input type="number" name="estoqueMinimo" id="estoqueMinimo" min="1" required>
+            </div>
+            <div class="inputPrice">
+                <label for="valorVenda" class="priceLabel">Valor de Venda</label>
+                <input type="number" name="valorVenda" id="valorVenda" step="any" placeholder="R$00,00" min="0.01" required>
+            </div>
+            <div class="submmition">    
+                <input type="submit" value="Cadastrar" class="btnSubmmit">
+            </div>
+            </select>
+        </form>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="{{ category }}">{{ message }}</div>
+        {% endfor %}
+        {% endif%}
+        {% endwith %}
+    </main>
+    <div class="newProductTipe"><a href="/tipoProduto">Cadastrar Novo Tipo de Produto</a></div>
+    <footer>
+        <p>Sistema desenvolvido para  a AP2 de Modelagem e Projeto de Sistemas</p>
+        <p>Orientadora: Diana Maria Da Camara Gorayeb</p>
+        <p>Desenvolvedores:</p>
+        <p class="highlight">Ian Garrido Reis</p>
+        <p class="highlight">Pedro Vitor Barros Maranhão</p>
+        <p class="highlight">Gustavo da Costa Frota</p>
+    </footer>
+</body>
+</html>

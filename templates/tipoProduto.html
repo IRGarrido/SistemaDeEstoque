@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Sistema de Estoque - Cadastro de Produto</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Estoque</h1>
+    </header>
+    <main>
+        <h2>Cadastro de Tipo de Produto</h2>
+        <form action="/adicionar_tipoProduto" method="post">
+            <div class="inputName">
+                <label for="nomeTipoProduto" class="nameLabel">Nome</label>
+                <input type="text" name="nomeTipoProduto" id="nomeTipoProduto" maxlength="20" pattern="^[a-zA-Z0-9 ]+$" required>
+            </div>
+            <div class="submmition">    
+                <input type="submit" value="Cadastrar" class="btnSubmmit">
+            </div>
+            </select>
+        </form>
+    </main>
+    <div class="newProductTipe"><a href="/">Retornar ao Cadastro de Produto</a></div>
+    <footer>
+        <p>Sistema desenvolvido para  a AP2 de Modelagem e Projeto de Sistemas</p>
+        <p>Orientadora: Diana Maria Da Camara Gorayeb</p>
+        <p>Desenvolvedores:</p>
+        <p class="highlight">Ian Garrido Reis</p>
+        <p class="highlight">Pedro Vitor Barros Maranhão</p>
+        <p class="highlight">Gustavo da Costa Frota</p>
+    </footer>
+</body>
+</html>
