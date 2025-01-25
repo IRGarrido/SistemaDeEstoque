@@ -20,9 +20,9 @@ Este projeto é um protótipo de sistema para controle de estoque, desenvolvido 
 ## Interface e Design
 A interface foi desenhada com foco em funcionalidade e simplicidade, priorizando o cumprimento dos requisitos estabelecidos. Embora o design não seja o ponto forte do projeto, ele atende aos objetivos acadêmicos e funcionais.
 - Tela principal - Cadastro de Produtos
-![Tela de Cadastro de Produto](image.png)
+![Tela de Cadastro de Produto](static/img/image.png)
 - Cadastro de Tipos de Produto
-![Tela de Cadastro de Tipos de Produto](image-1.png)
+![Tela de Cadastro de Tipos de Produto](static/img/image-1.png)
 
 ## Estrutura do Projeto
 ```plaintext
